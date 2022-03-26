@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Supermercado+One&display=swap");
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+  }
+
+  img {
+    max-width: 200px;
+    max-height:300px;
+    display:inline-block;
+
+  }
+
+  /*Typography*/
+
+  h1 {
+    font-weight: 300;
+    font-size: 4rem;
+  }
+  .brunch-text {
+    font-size: 4rem;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #fff;
+    margin-top: 1em;
+    font-weight:700;
+  }
+  .brunch-text span {
+    font-weight: 300;
+    display: block;
+    font-size: .85em;
+  }
+  span.brunch{
+      font-weight: 700;
+      color:#551a8b;
+      text-transform: uppercase;
+      font-style: italic;
+      font-size:4rem;
+
+  }
+  .name{
+      font-weight:600;
+      font-size:2.5em;
+      color:#551a8b;
+      text-transform: uppercase;
+      padding:5px;
+  }
+  td{
+      color:pink;
+      font-weight:600;
+      padding:10px;
+  }
+  td span{
+      color:#551a8b;
+      font-style: italic;
+      font-weight:200;
+  }
+
+  .brunch-guide-head h1{
+      font-weight:300;
+      color:pink;
+      text-transform: uppercase;
+      padding-top:5px;
+      padding-bottom:5px;
+  }
+
+  /*buttons*/
+  .button {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0.5em 1.75em;
+    color: white;
+  }
+  .button-accent:hover,
+  .button-accent:focus {
+    background: #551a8b;
+    color: white;
+  }
+  
+  /*header*/
+
+  header {
+    position: absolute;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+    margin: 1em;
+  }
+  nav a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 1.5em;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: white;
+  }
+
+  /*Restaurant Hero*/
+  .brunch-hero {
+    background-image: url("images/brunch-hero.png");
+    padding: 10em 0;
+    background-size: cover;
+    background-position: center;
+    height: 45em;
+   
+  }
+
+  /*Table One*/
+  table{
+    padding-bottom:5px;
+}
+.brunch-guide{
+    width:50%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius:5px;
+    box-shadow:0px 0px 50px pink;
+    margin:auto;
+    
+}
+td a{
+    text-decoration: none;
+}

@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Supermercado+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height:auto
+  }
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+section::after,
+footer::after{
+content:"";
+display:block;
+clear:both;
+}
+
+.col-1{
+    float:left;
+    width:100%;
+    padding-bottom:1.5em;
+}
+
+.col-3{
+    padding:1em 0;
+}
+/* Typography */
+
+h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+.home-text {
+  font-size: 4rem;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #fff;
+  margin-top: 1em;
+  font-weight:700;
+}
+.home-text span {
+  font-weight: 300;
+  display: block;
+  font-size: .85em;
+}
+.text-sub{
+    margin:0 0 .5em;
+}
+
+.footer-list{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+@media (min-width: 60rem) {
+    p{
+        font-size:1.2rem;
+        line-height:1.6rem;
+    }
+  .home-text {
+    font-size: 2.75rem;
+  }
+}
+
+
+
+/* Button */
+
+.button {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.5em 1.75em;
+  color: white;
+}
+.button-accent:hover,
+.button-accent:focus {
+  background: #551a8b;
+  color: white;
+}
+
+.button-small{
+    font-size:.7rem;
+    color:white;
+    font-weight:700;
+}
+/* Header */
+
+header {
+  position: absolute;
+  margin-top: 1em;
+  left: 0;
+  right: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin: 1em;
+}
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 1.5em;
+}
+nav a:hover,
+nav a:focus {
+  color: white;
+}
+
+/*Home Hero*/
+
+.home-hero {
+  background-image: url("images/boston1.png");
+  padding: 10em 0;
+  background-size: cover;
+  background-position: center;
+  height: 40em;
+}
+
+.home-about-text {
+  background-color: #232323;
+  padding: 3em;
+  width: 100vw;
+  margin-left: -2.5vw;
+  outline: 2px solid pink;
+  outline-offset: -2.5em;
+  color: white;
+  position: relative;
+}
+.home-about-text h1 {
+  color: pink;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.3em;
+  background: #232323;
+  padding: 0 0.25em;
+}
+
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .home-about {
+    background-image: url("images/you!.png");
+    padding-bottom: 10em;
+    height: 25em;
+  }
+  .home-about-text {
+    width: 50%;
+    margin-left: -2.5%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    top: -5em;
+    text-align: left;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
+  }
+  .home-about-text h1 {
+    top: 0.8em;
+    left: 6rem;
+    transform: translateX(0);
+  }
+}
+
+/*Content*/
+.home-content{
+    margin:3em 0;
+}
+figure.home-img{
+    position:relative;
+    margin:0;
+    display:inline-block;
+    width:33.3333334%;
+}
+
+.profile{
+    position:absolute;
+    z-index:100;
+    bottom:0em;
+    left:0em;
+    right:0em;
+    color:white;
+    background: rgba(0, 0, 0, 0.75);
+    padding-bottom:2em;
+}
+.profile p{
+    margin: 1em;
+}
+
+
+
+
+
+@media (min-width:60rem){
+    .home-img{
+        width:33.3333334%;
+        overflow:hidden;
+    }
+    .profile{
+        transform:translateY(150%);
+    }
+
+    .home-img:hover .profile{
+        transform:translateY(0%);
+    }
+}
+/*Form*/
+.subscribe{
+    background-image: url("images/pinkbg.png");
+    padding:6em 0;
+    color:white;
+}
+
+footer{
+    background:#232323;
+    color:#fff;
+    text-align :center;
+    height:auto;
+
+}
+
