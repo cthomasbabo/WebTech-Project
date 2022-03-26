@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Supermercado+One&display=swap");
+
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+  }
+
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+/*typography*/
+h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+  p {
+    margin-top: 0;
+    line-height: 1.5;
+  }
+  .contact-text {
+    font-size: 4rem;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #fff;
+    margin-top: 1em;
+    font-weight:700;
+  }
+  .contact-text span {
+    font-weight: 300;
+    display: block;
+    font-size: 0.65em;
+  }
+
+  .feedback h1{
+      margin:1em 0;
+      text-transform:uppercase;
+      font-weight:700;
+      color:pink;
+  }
+legend{
+    color:pink;
+    font-size: 2em;
+}
+label{
+    color:#551a8b;
+}
+.info{
+    font-size:1.75em;
+}
+.recs{
+    font-size:1.2em;
+}
+
+
+/*header*/
+
+  header {
+    position: absolute;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+    margin: 1em;
+  }
+  nav a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 1.5em;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: white;
+  }
+  .links ul{
+      margin:0;
+      padding:0;
+      list-style-type: none;
+  }
+  .links li{
+      margin:1.5em;
+      display:inline-block;
+  }
+  .links a{
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1.5em;
+    border:2.5px solid pink;
+    color:pink;
+    background-color: white;
+   
+  }
+/*hero*/
+  .contact-hero {
+    background-image: url("images/boston1.png");
+    padding: 10em 0;
+    background-size: cover;
+    background-position: center;
+    height: 40em;
+  }
+
+  /*Fieldset Class One*/
+  .one{
+      position:relative;
+      height:20vh;
+  }
+  .one .info{
+      display:inline-block;
+      padding:.35em 1em;
+  }
+  .one input{
+      height:5vh;
+      background-color: pink;
+  }
+  .two{
+      width:50%;
+      float:right;
+      height:55vh;
+  }
+  .two .recs{
+      padding:.35em;
+  }
+  .two input{
+      height:5vh;
+      background-color:pink;
+  }
+
+  .three{
+      height:55vh;
+  }
+  .three .review{
+    padding:.35em;
+    font-weight: 600;
+  }
+
+  input{
+    border:none;
+    border-width: 0px;
+    box-shadow: none;
+  }
+
+
+  textarea{
+      background-color: pink;
+      border:none;
+  }
+  
+
+  .submit{
+    margin-top:5px;
+  }
