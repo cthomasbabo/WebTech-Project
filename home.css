@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Supermercado+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 * {
   box-sizing: border-box;
@@ -10,11 +11,24 @@ body {
   font-family: "Raleway", sans-serif;
   text-align: center;
 }
+.logo {
+  display: block;
+  font-family: "Bebas Neue", cursive;
+  margin-bottom: 0;
+  color: #551a8b;
+  font-size: 70px;
+  text-align: center;
+}
+@media (max-width: 426px) {
+  .logo {
+    font-size: 25px;
+  }
+}
 
 img {
-    max-width: 100%;
-    height:auto
-  }
+  max-width: 100%;
+  height: auto;
+}
 
 .container {
   width: 95%;
@@ -22,20 +36,20 @@ img {
 }
 
 section::after,
-footer::after{
-content:"";
-display:block;
-clear:both;
+footer::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-.col-1{
-    float:left;
-    width:100%;
-    padding-bottom:1.5em;
+.col-1 {
+  float: left;
+  width: 100%;
+  padding-bottom: 1.5em;
 }
 
-.col-3{
-    padding:1em 0;
+.col-3 {
+  padding: 1em 0;
 }
 /* Typography */
 
@@ -60,34 +74,32 @@ p:last-of-type {
   padding-right: 1em;
   color: #fff;
   margin-top: 1em;
-  font-weight:700;
+  font-weight: 700;
 }
 .home-text span {
   font-weight: 300;
   display: block;
-  font-size: .85em;
+  font-size: 0.85em;
 }
-.text-sub{
-    margin:0 0 .5em;
+.text-sub {
+  margin: 0 0 0.5em;
 }
 
-.footer-list{
-    margin:0;
-    padding:0;
-    list-style-type: none;
+.footer-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 @media (min-width: 60rem) {
-    p{
-        font-size:1.2rem;
-        line-height:1.6rem;
-    }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
   .home-text {
     font-size: 2.75rem;
   }
 }
-
-
 
 /* Button */
 
@@ -108,10 +120,10 @@ p:last-of-type {
   color: white;
 }
 
-.button-small{
-    font-size:.7rem;
-    color:white;
-    font-weight:700;
+.button-small {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 700;
 }
 /* Header */
 
@@ -142,7 +154,34 @@ nav a:hover,
 nav a:focus {
   color: white;
 }
-
+nav .icon {
+  display: none;
+}
+/* When screen is less than 426px wide (iphone 12 pro screen) hide all links except for home 
+show the icon to open/close navbar */
+@media screen and (max-width: 426px) {
+  nav li:not(:first-child) {
+    display: none;
+  }
+  nav a.icon{
+    float: right;
+    display:block;
+  }
+}
+@media screen and (max-width: 426px){
+  nav.responsive {position: relative;}
+  nav.responsive a.icon{
+    position:absolute;
+    right:0;
+    top:0;
+  }
+  nav.responsive li a{
+    float:none;
+    display:block;
+    text-align:left;
+    font-size: 5px;
+  }
+}
 /*Home Hero*/
 
 .home-hero {
@@ -151,6 +190,26 @@ nav a:focus {
   background-size: cover;
   background-position: center;
   height: 40em;
+}
+
+@media (max-width:426px){
+  .home-text{
+    font-size: 20px;
+  }
+  .home-about-text h1{
+    font-size:20px;
+  }
+  .container h1{
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+
+@media (min-width:1024px) {
+  .home-text{
+    margin-top:100px;
+  }
 }
 
 .home-about-text {
@@ -199,59 +258,56 @@ nav a:focus {
 }
 
 /*Content*/
-.home-content{
-    margin:3em 0;
-}
-figure.home-img{
-    position:relative;
-    margin:0;
-    display:inline-block;
-    width:33.3333334%;
+.home-content {
+  margin: 3em 0;
 }
 
-.profile{
-    position:absolute;
-    z-index:100;
-    bottom:0em;
-    left:0em;
-    right:0em;
-    color:white;
-    background: rgba(0, 0, 0, 0.75);
-    padding-bottom:2em;
-}
-.profile p{
-    margin: 1em;
+figure.home-img {
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  width: 33.3333334%;
 }
 
+.profile {
+  position: absolute;
+  z-index: 100;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  padding-bottom: 2em;
+}
+.profile p {
+  margin: 1em;
+}
 
+/* responsive css*/
 
+@media (min-width: 60rem) {
+  .home-img {
+    width: 33.3333334%;
+    overflow: hidden;
+  }
+  .profile {
+    transform: translateY(150%);
+  }
 
-
-@media (min-width:60rem){
-    .home-img{
-        width:33.3333334%;
-        overflow:hidden;
-    }
-    .profile{
-        transform:translateY(150%);
-    }
-
-    .home-img:hover .profile{
-        transform:translateY(0%);
-    }
+  .home-img:hover .profile {
+    transform: translateY(0%);
+  }
 }
 /*Form*/
-.subscribe{
-    background-image: url("images/pinkbg.png");
-    padding:6em 0;
-    color:white;
+.subscribe {
+  background-image: url("images/pinkbg.png");
+  padding: 6em 0;
+  color: white;
 }
 
-footer{
-    background:#232323;
-    color:#fff;
-    text-align :center;
-    height:auto;
-
+footer {
+  background: #232323;
+  color: #fff;
+  text-align: center;
+  height: auto;
 }
-
