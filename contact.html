@@ -11,51 +11,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBQFPD122Y"></script>
-<script>
-  // send data from form to google analytics account for contact.html page... from google analytics
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-NBQFPD122Y');
-  gtag('get', '<target>', '<field_name>', callback)
-  // Get a reference to the form element, assuming
-// it contains the ID attribute "signup-form".
-let form = document.getElementsByClassName("guide");
-
-// Add a listener for the "submit" event.
-form.addEventListener('submit', function(event) {
-
-  // Prevent the browser from submitting the form
-  // and thus unloading the current page.
-  event.preventDefault();
-
-// Creates a timeout to call submitForm after one second.
-setTimeout(submitForm, 1000);
-
-// Monitors whether or not the form has been submitted.
-// This prevents the form from being submitted twice in cases
-// where the event callback function fires normally.
-let formSubmitted = false;
-
-function submitForm() {
-  if (!formSubmitted) {
-    formSubmitted = true;
-    form.submit();
-  }
-}
-
-// Sends the event to Google Analytics and
-// resubmits the form once the hit is done.
-gtag('event', 'signup_form_complete', {
-  'event_callback': submitForm
-});
-});
-gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
-
-</script>
   </head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <body>
     <header>
       <h1 class="logo">My Girls BOS</h1>
@@ -92,7 +49,7 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
     <section class="feedback-form">
       <div class="feedback">
           <h1>Recommendations & Feedback</h1>
-        <form action="/contact.html" method="POST">
+        <form action="https://www.mygirlsbos.com/" method="POST" name="myForm">
           <fieldset class="one">
             <legend>Your Info</legend>
             <div class="info">
@@ -100,7 +57,7 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
               <input
                 type="text"
                 placeholder="Full Name"
-                name="full-name"
+                name="fname"
                 id="name"
               />
             </div>
@@ -177,6 +134,7 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
               </fieldset>
               <fieldset class="three">
                 <legend>Feedback</legend>
+                <br>
             <div class="review">
               <label>What did you think of this website?</label>
               </div>
@@ -192,15 +150,7 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
               <input type="radio" name="review" value="bad" />
               <label>Bad</label>
             </div>
-            <div class="review">
-              <label>Were our recommendations useful?</label>
-              </div>
-              <div class="input">
-              <input type="radio" name="review" value="yes" />
-              <label>Yes Totally!</label>
-              <input type="radio" name="review" value="no" />
-              <label>Not At All...</label>
-            </div>
+            <br>
             <div class="review">
                 <label>Additional Comments & Feedback:</label>
             </div>
@@ -235,6 +185,13 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
     }
     document.getElementsByClassName("submit").onclick = function (){
       submitBtn();
+    }
+    function validateForm(){
+      let form = document.forms["myForm"]["fname"].value;
+      if (form === ""){
+        alert("Name must be filled out");
+        return false;
+      }
     }
     </script>
   </body>
