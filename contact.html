@@ -92,7 +92,7 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
     <section class="feedback-form">
       <div class="feedback">
           <h1>Recommendations & Feedback</h1>
-        <form action="" method="post">
+        <form action="/contact.html" method="POST">
           <fieldset class="one">
             <legend>Your Info</legend>
             <div class="info">
@@ -231,12 +231,10 @@ gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
     }
     function submitBtn(){
       const btn = document.getElementsByClassName("submit");
-      if (btn === "clicked"){
         btn.innerHTML = "Thank You for the Feedback!"
-      }
-      else{
-
-      }
+    }
+    document.getElementsByClassName("submit").onclick = function (){
+      submitBtn();
     }
     </script>
   </body>

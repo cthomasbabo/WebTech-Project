@@ -236,10 +236,11 @@ show the icon to open/close navbar */
   h1 {
     font-size: 2.5rem;
   }
+
   .home-about {
     background-image: url("images/you!.png");
     padding-bottom: 10em;
-    height: 25em;
+    height: 25em; 
   }
   .home-about-text {
     width: 50%;
