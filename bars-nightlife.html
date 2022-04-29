@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bars & Night Life</title>
     <link rel="stylesheet" href="content.css" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 </head>
 <body>
     <header>
       <h1 class="logo">My Girls BOS</h1>
-        <nav>
+      <nav class="topnav" id="myTopnav">
+        <a href="#" class="icon" onclick="navBar()">
+          <i class="fa fa-bars"></i>
+        </a>
           <ul>
             <li><a href="Index.html">Home</a></li>
-            <li><a href="">About</a></li>
+            
             <li><a href="Restraunts.html">Restaurants</a></li>
             <li><a href="Brunch.html">Brunch</a></li>
             <li><a href="Outdoors.html">Summer & Outdoor</a></li>
@@ -178,5 +185,18 @@
         <br>
       </div>
       </footer>
+      <script>
+        function navBar() {
+        let nav = document.getElementById("myTopnav");
+        if (nav.className === "topnav") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "topnav";
+        }
+      }
+      document.getElementsByClassName("icon").onclick = function () {
+        navBar();
+      };
+      </script>
 </body>
 </html>

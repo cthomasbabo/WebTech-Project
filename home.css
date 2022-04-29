@@ -19,7 +19,7 @@ body {
   font-size: 70px;
   text-align: center;
 }
-@media (max-width: 426px) {
+@media screen and (max-width: 426px) {
   .logo {
     font-size: 25px;
   }
@@ -91,13 +91,14 @@ p:last-of-type {
   list-style-type: none;
 }
 
-@media (min-width: 60rem) {
+@media screen and (min-width: 60rem) {
   p {
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
   .home-text {
     font-size: 2.75rem;
+    padding-top:10px;
   }
 }
 
@@ -133,53 +134,54 @@ header {
   left: 0;
   right: 0;
 }
-
-nav ul {
+.topnav{
+  overflow: hidden;
+}
+.topnav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-nav li {
+.topnav li {
   display: inline-block;
   margin: 1em;
 }
-nav a {
+.topnav a {
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8em;
   padding: 1.5em;
+  
 }
-nav a:hover,
-nav a:focus {
+.topnav a:hover,
+.topnav a:focus {
   color: white;
 }
-nav .icon {
+.topnav .icon {
   display: none;
 }
 /* When screen is less than 426px wide (iphone 12 pro screen) hide all links except for home 
 show the icon to open/close navbar */
 @media screen and (max-width: 426px) {
-  nav li:not(:first-child) {
-    display: none;
-  }
-  nav a.icon{
-    float: right;
+  .topnav li{display:none;}
+  .topnav a.icon{
     display:block;
+    float:right;
+    
   }
 }
 @media screen and (max-width: 426px){
-  nav.responsive {position: relative;}
-  nav.responsive a.icon{
+  .topnav.responsive{position:relative;}
+  .topnav.responsive .icon{
     position:absolute;
     right:0;
     top:0;
   }
-  nav.responsive li a{
-    float:none;
+  .topnav.responsive a{
+    float:right;
     display:block;
-    text-align:left;
-    font-size: 5px;
+    text-align:right;
   }
 }
 /*Home Hero*/
@@ -190,11 +192,14 @@ show the icon to open/close navbar */
   background-size: cover;
   background-position: center;
   height: 40em;
+  
 }
 
-@media (max-width:426px){
+
+@media (max-width:768px){
   .home-text{
     font-size: 20px;
+    padding-top:50px;
   }
   .home-about-text h1{
     font-size:20px;
@@ -205,12 +210,6 @@ show the icon to open/close navbar */
   }
 }
 
-
-@media (min-width:1024px) {
-  .home-text{
-    margin-top:100px;
-  }
-}
 
 .home-about-text {
   background-color: #232323;
@@ -298,6 +297,34 @@ figure.home-img {
     transform: translateY(0%);
   }
 }
+
+@media (max-width: 786px){
+  
+  .home-img img{
+    opacity:1;
+    display:block;
+    
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+.profile {
+  display:none;
+  opacity:0;
+  transition: .5s ease;
+  text-align:center;
+  background-color:#551a8b;
+  height: auto;
+}
+.home-img:hover .profile{
+  opacity:.6;
+  display:block;
+  height:100%
+}
+.home-img:hover img{
+  opacity:.3
+}
+}
+
 /*Form*/
 .subscribe {
   background-image: url("images/pinkbg.png");

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Supermercado+One&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
     box-sizing: border-box;
     transition: all ease-in-out 250ms;
@@ -20,9 +20,29 @@
 
   /*Typography*/
 
+  .logo {
+    display: block;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 0;
+    color: #551a8b;
+    font-size: 70px;
+    text-align: center;
+  }
+  @media screen and (max-width: 426px) {
+    .logo {
+      font-size: 30px;
+      display:flex;
+      justify-content: center;
+    }
+  }
   h1 {
     font-weight: 300;
     font-size: 4rem;
+    color:#551a8b;
+    
+  }
+  #top{
+    font-family:"Bebas Neue",cursive;
   }
   .text {
     font-size: 4rem;
@@ -32,6 +52,19 @@
     color: #fff;
     margin-top: 1em;
     font-weight:700;
+  }
+  @media (max-width:796px){
+    .text{
+      font-size:2rem;
+      margin-top:150px;
+     
+    }
+   
+  }
+  @media (max-width:426px){
+    .text span.bold{
+      font-size:40px;
+    }
   }
   .text span {
     font-weight: 300;
@@ -57,12 +90,19 @@
       color:pink;
       font-weight:600;
       padding:10px;
+      font-family:"Bebas Neue",cursive;
+      font-size: 20px;
   }
   td span{
       color:#551a8b;
-      font-style: italic;
       font-weight:200;
+      text-decoration-color: #551a8b;
+      font-family:"bebas neue", cursive;
+      font-size:20px;
+      text-transform: uppercase;
   }
+ 
+  
 
   .guide-head h1{
       font-weight:300;
@@ -93,6 +133,7 @@
 
 /*header*/
 
+
   header {
     position: absolute;
     margin-top: 1em;
@@ -112,12 +153,38 @@
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
+    text-decoration-color: #551a8b;
     font-size: 0.8em;
     padding: 1.5em;
   }
   nav a:hover,
   nav a:focus {
     color: white;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  @media screen and (max-width: 426px) {
+    .topnav li{display:none;}
+    .topnav a.icon{
+      display:block;
+      float:right;
+      
+    }
+  }
+  @media screen and (max-width: 426px){
+    .topnav.responsive{position:relative;}
+    .topnav.responsive .icon{
+      position:absolute;
+      right:5px;
+      top:0;
+      
+    }
+    .topnav.responsive a{
+      float:right;
+      display:block;
+      text-align:right;
+    }
   }
 
   /* Hero*/
@@ -127,8 +194,22 @@
     background-size: cover;
     background-position: center;
     height: 45em;
-   
   }
+
+  @media (max-width:426px){
+    .res-hero{
+      width: 426px;;
+    }
+    /* To make table guide responsive : add display flex & make the overflow scrollable on mobile device */
+    table.guide{
+      width:425px;
+     overflow: scroll;
+     display:flex;
+     justify-content:flex-start;
+     justify-items: center;
+    }
+  }
+ 
   .brunch-hero{
     background-image: url("images/brunch-hero.png");
     padding: 10em 0;
@@ -164,8 +245,10 @@
       border-radius:5px;
       box-shadow:0px 0px 50px pink;
       margin:auto;
+      display:block;
       
   }
+  
   td a{
       text-decoration: none;
   }

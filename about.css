@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Supermercado+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+  }
+
+  img {
+    max-width: 200px;
+    max-height:300px;
+    display:inline-block;
+
+  }
+
+  .logo {
+    display: block;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 0;
+    color: #551a8b;
+    font-size: 70px;
+    text-align: center;
+  }
+  @media screen and (max-width: 426px) {
+    .logo {
+      font-size: 25px;
+    }
+  }
+
+  header {
+  position: absolute;
+  margin-top: 1em;
+  left: 0;
+  right: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin: 1em;
+}
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 1.5em;
+}
+nav a:hover,
+nav a:focus {
+  color: white;
+}
+nav .icon {
+  display: none;
+}
+
+.about-hero{
+    background-image: url("images/res-hero.png");
+    padding: 10em 0;
+    background-size: cover;
+    background-position: center;
+    height: 45em;
+}
