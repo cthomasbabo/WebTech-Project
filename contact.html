@@ -10,7 +10,52 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBQFPD122Y"></script>
+<script>
+  // send data from form to google analytics account for contact.html page... from google analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NBQFPD122Y');
+  gtag('get', '<target>', '<field_name>', callback)
+  // Get a reference to the form element, assuming
+// it contains the ID attribute "signup-form".
+let form = document.getElementsByClassName("guide");
+
+// Add a listener for the "submit" event.
+form.addEventListener('submit', function(event) {
+
+  // Prevent the browser from submitting the form
+  // and thus unloading the current page.
+  event.preventDefault();
+
+// Creates a timeout to call submitForm after one second.
+setTimeout(submitForm, 1000);
+
+// Monitors whether or not the form has been submitted.
+// This prevents the form from being submitted twice in cases
+// where the event callback function fires normally.
+let formSubmitted = false;
+
+function submitForm() {
+  if (!formSubmitted) {
+    formSubmitted = true;
+    form.submit();
+  }
+}
+
+// Sends the event to Google Analytics and
+// resubmits the form once the hit is done.
+gtag('event', 'signup_form_complete', {
+  'event_callback': submitForm
+});
+});
+gtag('config', 'G-NBQFPD122Y', { 'transport_type': 'beacon'});
+
+</script>
   </head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <body>
     <header>
       <h1 class="logo">My Girls BOS</h1>
@@ -183,7 +228,16 @@
     }
     document.getElementsByClassName("icon").onclick = function () {
       navBar();
-    };
+    }
+    function submitBtn(){
+      const btn = document.getElementsByClassName("submit");
+      if (btn === "clicked"){
+        btn.innerHTML = "Thank You for the Feedback!"
+      }
+      else{
+
+      }
+    }
     </script>
   </body>
 </html>

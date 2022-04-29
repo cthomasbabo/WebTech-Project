@@ -153,7 +153,7 @@
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-    text-decoration-color: #551a8b;
+    color: #551a8b;
     font-size: 0.8em;
     padding: 1.5em;
   }
@@ -245,12 +245,13 @@
       border-radius:5px;
       box-shadow:0px 0px 50px pink;
       margin:auto;
-      display:block;
+      
       
   }
   
-  td a{
+  .guide td a{
       text-decoration: none;
+      color: #551a8b;
   }
   
   footer{
