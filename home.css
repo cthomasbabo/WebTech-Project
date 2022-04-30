@@ -53,7 +53,11 @@ h1 {
   font-size: 4rem;
   margin-top: 0;
 }
-
+.contentText{
+  font-family:"bebas neue",cursive;
+  font-size:80px;
+  color:#551a8b;
+}
 p {
   margin-top: 0;
   line-height: 1.5;
@@ -233,9 +237,9 @@ show the icon to open/close navbar */
   }
 
   .home-about {
-    background-image: url("images/you!.png");
     padding-bottom: 10em;
     height: 25em;
+    position:relative;
   }
   .home-about-text {
     width: 50%;
@@ -251,6 +255,13 @@ show the icon to open/close navbar */
     left: 6rem;
     transform: translateX(0);
   }
+}
+.home-about img{
+  position:absolute;
+  right:0px;
+  top:0px;
+  height:663.5px;
+  width:663.5px;
 }
 
 /*Content*/

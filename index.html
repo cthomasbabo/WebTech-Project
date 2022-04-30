@@ -76,11 +76,14 @@
           <br/>
           <button class="aboutbtn" id="aboutBtn">More</button>
         </div>
+        <div>
+          <img src="images/IMG1.jpg" alt="my image" title="myImg" id="myImg"/>
+        </div>
       </section>
     </div>
     <br />
-
-    <h1>FEATURED CONTENT</h1>
+    <br>
+    <h1 class="contentText">FEATURED CONTENT</h1>
     <div class="slideshow-container">
       <!-- top 3 images on homepage-->
       <!-- Slideshow with reference code from W3Schools Demo -->
@@ -306,6 +309,24 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+      }
+
+
+      const img = document.getElementById("myImg");
+      // Enlarge Image
+      function enlargeImg(){
+        img.src = "images/"
+      }
+      document.getElementById("myImg").onmouseover = function (){
+        enlargeImg();
+      }
+      function resetImg(){
+        console.log("...starting resize image function...");
+        img.style.width = '663.5px';
+        img.style.height = '400px';
+      }
+      document.getElementById("myImg").onmouseout = function(){
+        resetImg();
       }
     </script>
   </body>
