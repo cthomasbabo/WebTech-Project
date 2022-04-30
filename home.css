@@ -126,6 +126,11 @@ p:last-of-type {
   color: white;
   font-weight: 700;
 }
+.aboutbtn{
+  font-family:"bebas neue",cursive;
+  width:50%;
+  text-align: center;
+}
 /* Header */
 
 header {

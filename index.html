@@ -63,15 +63,17 @@
       <section class="home-about">
         <div class="home-about-text" id="about">
           <h1>WHO WE ARE</h1>
-          <p>
+          <p id="aboutme">
             My Girls Bos. is a website created as a project for a Web Tech
             course at Babson College.
           </p>
-          <p>
+          <p id="aboutUs">
             This website serves as a guide to the hottest restaurants, bars,
             clubs, and more in the city of Boston. We've got you covered to make
             the most out of what the city has to offer!
           </p>
+          <br>
+          <button class="aboutbtn" id="aboutBtn">More</button>
         </div>
       </section>
     </div>
@@ -191,6 +193,34 @@
       document.getElementsByClassName("icon").onclick = function () {
         navBar();
       };
+      // change text in about page when button is clicked from StackOverflow
+      const btn = document.getElementById("aboutBtn");
+      const about = document.getElementById("aboutme");
+        const more = document.getElementById("aboutUs");
+      const aboutMe = e => {
+        // stop the original text function from happening when button is clicked
+        e.stopPropagation();
+
+        console.log("...starting change text function...")
+        about.textContent = "Hey! I'm Caroline Thomas!";
+        more.textContent = "I am a huge foodie, I love trying new things, and sharing my experiences with others! I am currently a junior at Babson College. I enjoy Web design & development, and business management. Click anywhere on the page to revert to original text.";
+        btn.style.backgroundColor = "lightpink";
+        btn.innerHTML = "Less";
+      }
+      // revert to original text
+      const orgText = () => {
+        console.log ("...starting restore original text function...");
+        about.textContent = "My Girls Bos. is a website created as a project for a Web Tech course at Babson College.";
+        more.textContent = "This website serves as a guide to the hottest restaurants, bars, clubs, and more in the city of Boston. We've got you covered to make the most out of what the city has to offer!";
+        btn.style.backgroundColor = "white";
+        btn.innerHTML = "More";
+
+      }
+      // trigger aboutMe function by clicking on button
+      btn.addEventListener('click', aboutMe);
+      // trigger original text function by clicking anywhere on the document
+      document.addEventListener('click', orgText);
+      
     </script>
   </body>
 </html>
