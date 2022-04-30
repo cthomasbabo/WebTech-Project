@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outdoors</title>
+    <link rel="stylesheet" href="content.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">My Girls BOS</h1>
+      <nav class="topnav" id="myTopnav">
+        <a href="#" class="icon" onclick="navBar()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Restraunts.html">Restaurants</a></li>
+            <li><a href="Brunch.html">Brunch</a></li>
+            <li><a href="Outdoors.html">Summer & Outdoor</a></li>
+            <li><a href="bars-nightlife.html">Bars & Nightlife </a></li>
+            <li><a href="">Things To Do</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="outdoor-hero">
+      <div class="bio">
+        <h1 class="text">
+          The ultimate guide to our favorite
+          <span class="bold">Activities</span> in the city of Boston!
+          <span>All in one place.</span>
+        </h1>
+        <a href="#top" class="button button-accent">See Guide</a>
+      </div>
+    </section>
+
+    <div class="guide-head">
+      <h1 id="top">Things to Do Guide</h1>
+    </div>
+    <br />
+    <table class="guide">
+      <tr>
+        <td colspan="4" class="name">Fenway Park</td>
+      </tr>
+      <tr>
+        <td class="img1">
+          <img
+            src="images/fenway-park1jpg.jpg"
+            alt="fenway-view"
+            title="fenway-view"
+          />
+        </td>
+        <td class="img1">
+          <img
+            src="images/Fenway-park2.jpg"
+            alt="fenway2"
+            title="fenway2"
+          />
+        </td>
+        <td class="img1">
+          <img src="images/Fenway-park3.jpg" alt="fenway" title="fenway" />
+        </td>
+      </tr>
+      <tr>
+        <td> Activity: <span>Baseball Games & Concerts</span></td>
+        <td>Location: <span>Fenway</span></td>
+        <td>Vibe: <span>Always a great time when the Sox Win!</span></td>
+      </tr>
+      <tr>
+        <td>Price: <span>$$$</span></td>
+        <td>Tickets: <span>Yes!</span></td>
+        <td>
+          Website:
+          <span
+            ><a
+              href="https://thefenway.com/locations/fenway-park"
+              >Fenway Park</a
+            ></span
+          >
+        </td>
+      </tr>
+    </table>
+    <br />
+    <table class="guide">
+      <tr>
+        <td colspan="4" class="name">Isabella Stewart Gardner Museum</td>
+      </tr>
+      <tr>
+        <td class="img1">
+          <img
+            src="images/gardner.jpg"
+            alt="gardner1"
+            title="gardner1"
+          />
+        </td>
+        <td class="img1">
+          <img
+            src="images/gardner2.jpg"
+            alt="gardner2"
+            title="gardner2"
+          />
+        </td>
+        <td class="img1">
+          <img
+            src="images/garder3.jpg"
+            alt="gardner3"
+            title="gardner3"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Activity: <span>Art Museum</span></td>
+        <td>Location: <span>Fenway</span></td>
+        <td>Vibe: <span>Biggest Art Heist in America took place here! </span></td>
+      </tr>
+      <tr>
+        <td>Price: <span>$</span></td>
+        <td>Reservations: <span>No, can buy tickets ahead of time</span></td>
+        <td>
+          Website:
+          <span
+            ><a href="https://www.gardnermuseum.org/"
+              >Gardner Museum</a
+            ></span
+          >
+        </td>
+      </tr>
+    </table>
+    <br>
+    <table class="guide">
+        <tr>
+          <td colspan="4" class="name">The Lawn on D</td>
+        </tr>
+        <tr>
+          <td class="img1">
+            <img
+              src="images/lawn1.jpg"
+              alt="lawn"
+              title="lawn"
+            />
+          </td>
+          <td class="img1">
+            <img
+              src="images/lawn2.jpg"
+              alt="lawn2"
+              title="lawn2"
+            />
+          </td>
+          <td class="img1">
+            <img
+              src="images/lawn3.jpg"
+              alt="lawn3"
+              title="lawn3"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Activity <span>Outdoor Space</span></td>
+          <td>Location: <span>Seaport</span></td>
+          <td>Vibe: <span>Instagrammable, Lots of live music & Games</span></td>
+        </tr>
+        <tr>
+          <td>Price: <span>$</span></td>
+          <td>Reservations: <span>No</span></td>
+          <td>
+            Website:
+            <span
+              ><a href="https://www.signatureboston.com/lawn-on-d"
+                >Lawn on D</a
+              ></span
+            >
+          </td>
+        </tr>
+      </table>
+      <br>
+      <footer>
+        <div class="container">
+        <div class="col-3">
+          <p>This is a Project for WebTech Course at Babson College.</p>
+        </div>
+        <div  class="sitemap-link">
+          <a href="sitemap.html" class="button button-small">SITEMAP</a>
+        </div>
+        <br>
+      </div>
+      </footer>
+      <script>
+        function navBar() {
+        let nav = document.getElementById("myTopnav");
+        if (nav.className === "topnav") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "topnav";
+        }
+      }
+      document.getElementsByClassName("icon").onclick = function () {
+        navBar();
+      };
+       //Animate Text Function
+       const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for(let i=0; i< splitText.length; i++){
+        text.innerHTML += "<span>"+ splitText[i] + "</span>"
+      }
+      let char = 0;
+      let timer = setInterval(onTick,50);
+
+      function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        // stop function
+        if (char===splitText.length){
+          complete();
+          return;
+        }
+        //create complete function 
+        function complete(){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+      </script>
+  </body>
+</html>
