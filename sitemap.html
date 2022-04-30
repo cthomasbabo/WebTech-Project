@@ -17,7 +17,7 @@
           <li><a href="Brunch.html">Brunch</a></li>
           <li><a href="Outdoors.html">Summer & Outdoor</a></li>
           <li><a href="bars-nightlife.html">Bars & Nightlife </a></li>
-          <li><a href="">Things To Do</a></li>
+          <li><a href="todo.html">Things To Do</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -33,9 +33,9 @@
              <li><a href="Restraunts.html">Restaurant Guide</a></li>
               <li><a href="Brunch.html">Brunch Guide</a></li>
               <li><a href="Outdoors.html">Outdoor Guide</a></li>
-        
+              
               <li><a href="bars-nightlife.html">Bars & Nightlife Guide</a></li>
-              <li><a href="">Things To Do Guide</a></li>
+              <li><a href="todo.html">Things To Do Guide</a></li>
              <li> <a href="https://docs.google.com/spreadsheets/d/1-TRq2uSepQDMxNLAWWB61HlAsruE1TlBbWGFF_PQsp4/edit?usp=sharing">Full List of Recommendations in Excel</a></li>
         </ul>
     </section>
@@ -49,5 +49,34 @@
       </div>
       </footer>
       <br>
+      <script>
+         //Animate Text Function
+      const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for(let i=0; i< splitText.length; i++){
+        text.innerHTML += "<span>"+ splitText[i] + "</span>"
+      }
+      let char = 0;
+      let timer = setInterval(onTick,50);
+
+      function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        // stop function
+        if (char===splitText.length){
+          complete();
+          return;
+        }
+        //create complete function 
+        function complete(){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+      </script>
   </body>
 </html>

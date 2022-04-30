@@ -49,7 +49,7 @@
     <section class="feedback-form">
       <div class="feedback">
           <h1>Recommendations & Feedback</h1>
-        <form action="https://www.mygirlsbos.com/" method="POST" name="myForm">
+        <form action="https://www.mygirlsbos.com/contact.html" method="POST" name="myForm" target="_blank" onsubmit="target_popup(this)">
           <fieldset class="one">
             <legend>Your Info</legend>
             <div class="info">
@@ -182,20 +182,51 @@
     document.getElementsByClassName("icon").onclick = function () {
       navBar();
     }
-    function submitBtn(){
-      const btn = document.getElementsByClassName("submit");
-        btn.innerHTML = "Thank You for the Feedback!"
-    }
-    document.getElementsByClassName("submit").onclick = function (){
-      submitBtn();
-    }
+    
     function validateForm(){
-      let form = document.forms["myForm"]["fname"].value;
-      if (form === ""){
+      let form = document.getElementsByName("myForm");
+      if (form["fname"].value.length == 0){
         alert("Name must be filled out");
-        return false;
       }
     }
+    document.getElementsByClassName("submit").onclick = function(){
+      validateForm();
+    }
+    // Function to Alert When Submitted
+    function target_popup(form) {
+      alert('Thank You for the feedback! :)');
+        window.open('',//URL should be blank so that it will take form attributes.
+                    'UniqueWindowName', //window name
+                    'width=400,height=400,resizeable,scrollbars');
+        form.target = 'UniqueWindowName';
+    }
+     //Animate Text Function
+     const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for(let i=0; i< splitText.length; i++){
+        text.innerHTML += "<span>"+ splitText[i] + "</span>"
+      }
+      let char = 0;
+      let timer = setInterval(onTick,50);
+
+      function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        // stop function
+        if (char===splitText.length){
+          complete();
+          return;
+        }
+        //create complete function 
+        function complete(){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
     </script>
   </body>
 </html>

@@ -44,7 +44,7 @@
           <li><a href="Brunch.html">Brunch</a></li>
           <li><a href="Outdoors.html">Summer & Outdoor</a></li>
           <li><a href="bars-nightlife.html">Bars & Nightlife </a></li>
-          <li><a href="">Things To Do</a></li>
+          <li><a href="todo.html">Things To Do</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -327,6 +327,39 @@
       document.getElementById("myImg").onmouseout = function(){
         resetImg();
       }
+      // ANIMATE TEXT FUNCTION FROM Vanilla JS Text Animation Tutorial via. Youtube
+      // Wrap letter in a span
+      
+      const text = document.querySelector(".logo");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      console.log(splitText);
+      for(let i=0; i< splitText.length; i++){
+        text.innerHTML += "<span>"+ splitText[i] + "</span>"
+      }
+      let char = 0;
+      let timer = setInterval(onTick,50);
+
+      function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        // stop function
+        if (char===splitText.length){
+          complete();
+          return;
+        }
+        //create complete function 
+        function complete(){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+
+      // Animate letter function
+
     </script>
   </body>
 </html>

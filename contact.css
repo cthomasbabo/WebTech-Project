@@ -26,6 +26,14 @@
   font-size: 70px;
   text-align: center;
 }
+  /* Span Fade for Animation */
+  .logo span{
+    opacity:0;
+    transition:all 1s ease;
+  }
+  .logo span.fade{
+    opacity:1;
+  }
 @media screen and (max-width: 426px) {
   .logo {
     font-size: 40px;
