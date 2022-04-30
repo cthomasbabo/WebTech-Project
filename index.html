@@ -72,6 +72,7 @@
             clubs, and more in the city of Boston. We've got you covered to make
             the most out of what the city has to offer!
           </p>
+          <p id="clickAny"></p>
           <br>
           <button class="aboutbtn" id="aboutBtn">More</button>
         </div>
@@ -196,25 +197,41 @@
       // change text in about page when button is clicked from StackOverflow
       const btn = document.getElementById("aboutBtn");
       const about = document.getElementById("aboutme");
-        const more = document.getElementById("aboutUs");
+      const more = document.getElementById("aboutUs");
+      const clickAny = document.getElementById("clickAny");
       const aboutMe = e => {
         // stop the original text function from happening when button is clicked
         e.stopPropagation();
 
         console.log("...starting change text function...")
         about.textContent = "Hey! I'm Caroline Thomas!";
-        more.textContent = "I am a huge foodie, I love trying new things, and sharing my experiences with others! I am currently a junior at Babson College. I enjoy Web design & development, and business management. Click anywhere on the page to revert to original text.";
+        more.textContent = "I am a huge foodie, I love trying new things, and sharing my experiences with others! I am currently a junior at Babson College. I enjoy Web design & development, and business management.";
+        clickAny.textContent = "Click anywhere on the page to revert to original text.";
+        // Change Element style based on User click on Button
+        console.log("...changing element style...")
         btn.style.backgroundColor = "lightpink";
         btn.innerHTML = "Less";
+        about.style.fontFamily = "bebas neue";
+        about.style.fontSize = "35px";
+        about.style.color = "lightpink";
+        more.style.fontFamily = "bebas neue";
+        clickAny.style.color = "lightpink";
+        clickAny.style.fontFamily= "bebas neue";
       }
       // revert to original text
       const orgText = () => {
         console.log ("...starting restore original text function...");
         about.textContent = "My Girls Bos. is a website created as a project for a Web Tech course at Babson College.";
         more.textContent = "This website serves as a guide to the hottest restaurants, bars, clubs, and more in the city of Boston. We've got you covered to make the most out of what the city has to offer!";
+        clickAny.textContent = "";
+        // Revert back to original Element Style based on User CLick anywhere on page
+        console.log("...reverting to original styles...")
         btn.style.backgroundColor = "white";
         btn.innerHTML = "More";
-
+        about.style.fontFamily = "raleway";
+        about.style.fontSize = "19px";
+        about.style.color = "white";
+        more.style.fontFamily = "raleway";
       }
       // trigger aboutMe function by clicking on button
       btn.addEventListener('click', aboutMe);
