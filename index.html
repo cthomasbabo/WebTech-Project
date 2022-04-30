@@ -77,7 +77,7 @@
           <button class="aboutbtn" id="aboutBtn">More</button>
         </div>
         <div>
-          <img src="images/IMG1.jpg" alt="my image" title="myImg" id="myImg"/>
+          <img src="images/Image1.png" alt="my image" title="myImg" id="myImg"/>
         </div>
       </section>
     </div>
@@ -315,15 +315,14 @@
       const img = document.getElementById("myImg");
       // Enlarge Image
       function enlargeImg(){
-        img.src = "images/"
+        img.src = "images/image2.png";
       }
       document.getElementById("myImg").onmouseover = function (){
         enlargeImg();
       }
       function resetImg(){
         console.log("...starting resize image function...");
-        img.style.width = '663.5px';
-        img.style.height = '400px';
+        img.src = "images/image1.png";
       }
       document.getElementById("myImg").onmouseout = function(){
         resetImg();
