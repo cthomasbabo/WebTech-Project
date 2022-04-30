@@ -73,99 +73,134 @@
             the most out of what the city has to offer!
           </p>
           <p id="clickAny"></p>
-          <br>
+          <br/>
           <button class="aboutbtn" id="aboutBtn">More</button>
         </div>
       </section>
     </div>
+    <br />
 
-    <section class="home-content">
-      <div class="container">
-        <h1>FEATURED CONTENT</h1>
-      </div>
+    <h1>FEATURED CONTENT</h1>
+    <div class="slideshow-container">
       <!-- top 3 images on homepage-->
-      <figure class="home-img">
+      <!-- Slideshow with reference code from W3Schools Demo -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
         <img
-          src="images/contessahomepg2.jpg"
+          src="images/coquette-1024x634.jpeg"
           alt="restaurant"
           title="restaurant"
+          style="width: 100%"
         />
-        <figcaption class="profile">
+        <div class="imgText">
           <p>Restaurants</p>
           <a href="Restraunts.html" class="button button-home button-small"
             >Explore More</a
           >
-        </figcaption>
-      </figure>
+        </div>
+      </div>
 
-      <figure class="home-img">
-        <img src="images/stregatree2.jpg" alt="brunch" title="brunch" />
-        <figcaption class="profile">
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img
+          src="images/stregatree2.jpg"
+          alt="brunch"
+          title="brunch"
+          style="width: 100%"
+        />
+        <div class="imgText">
           <p>Brunch</p>
           <a href="Brunch.html" class="button button-home button-small"
             >Explore More</a
           >
-        </figcaption>
-      </figure>
+        </div>
+      </div>
 
-      <figure class="home-img">
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
         <img
-          src="images/Terraroof2.jpg"
+          src="images/outdoorImg.jpg"
           alt="summer/outdoor"
           title="outdoors"
+          style="width: 100%"
         />
-        <figcaption class="profile">
-          <p>Outdoor</p>
+        <div class="imgText">
+          <p>Outdoor Vibes</p>
           <a href="Outdoors.html" class="button button-home button-small"
             >Explore More</a
           >
-        </figcaption>
-      </figure>
+        </div>
+      </div>
 
-      <figure class="home-img">
-        <img src="images/GreatestBar-home.jpg" alt="Bars" title="bars" />
-        <figcaption class="profile">
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img
+          src="images/GreatestBar-home.jpg"
+          alt="Bars"
+          title="bars"
+          style="width: 100%"
+        />
+        <div class="imgText">
           <p>Bars</p>
           <a href="bars-nightlife.html" class="button button-home button-small"
             >Explore More</a
           >
-        </figcaption>
-      </figure>
+        </div>
+      </div>
 
-      <figure class="home-img">
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
         <img
-          src="images/bignightlive-lights.png"
+          src="images/hero3.jpg"
           alt="nightlife"
           title="nightlife"
+          style="width: 100%"
         />
-        <figcaption class="profile">
-          <p>Night Life</p>
+        <div class="imgText">
+          <p>NightLife</p>
           <a href="bars-nightlife.html" class="button button-home button-small"
             >Explore More</a
           >
-        </figcaption>
-      </figure>
-
-      <figure class="home-img">
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
         <img
-          src="images/swingjpg.jpg"
-          alt="Things To Do"
+          src="images/fenway-park-1.jpg"
+          alt="things-to-do"
           title="things-to-do"
+          style="width: 100%"
         />
-        <figcaption class="profile">
+        <div class="imgText">
           <p>Things To Do</p>
-          <a href="" class="button button-home button-small">Explore More</a>
-        </figcaption>
-      </figure>
-    </section>
+          <a href="" class="button button-home button-small"
+            >Explore More</a
+          >
+        </div>
+      </div>
+      <!-- next and previous buttons ( Code direct from W3 Schools)-->
 
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- Dots and Circles (Code direct from W3 Schools) -->
+    <br />
+    <div style="text-align: center">
+      <span class="dot" onclick="currentslide(1)"></span>
+      <span class="dot" onclick="currentslide(2)"></span>
+      <span class="dot" onclick="currentslide(3)"></span>
+      <span class="dot" onclick="currentslide(4)"></span>
+      <span class="dot" onclick="currentslide(5)"></span>
+      <span class="dot" onclick="currentslide(5)"></span>
+    </div>
+    <br />
     <section class="subscribe">
       <div class="container">
         <h1 class="home-text text-sub">
           Want More From Boston?
-          <span>Subscribe to our Email Newsletter!</span>
+          <span>Share your info in the contact page to stay in touch!</span>
         </h1>
-        <a href="" class="button button-accent">EMAIL</a>
+        <a href="contact.html" class="button button-accent">CONTACT US</a>
       </div>
       <!-- Add form to button-->
     </section>
@@ -199,43 +234,79 @@
       const about = document.getElementById("aboutme");
       const more = document.getElementById("aboutUs");
       const clickAny = document.getElementById("clickAny");
-      const aboutMe = e => {
+      const aboutMe = (e) => {
         // stop the original text function from happening when button is clicked
         e.stopPropagation();
 
-        console.log("...starting change text function...")
+        console.log("...starting change text function...");
         about.textContent = "Hey! I'm Caroline Thomas!";
-        more.textContent = "I am a huge foodie, I love trying new things, and sharing my experiences with others! I am currently a junior at Babson College. I enjoy Web design & development, and business management.";
-        clickAny.textContent = "Click anywhere on the page to revert to original text.";
+        more.textContent =
+          "I am a huge foodie, I love trying new things, and sharing my experiences with others! I am currently a junior at Babson College. I enjoy Web design & development, and business management.";
+        clickAny.textContent =
+          "Click anywhere on the page to revert to original text.";
         // Change Element style based on User click on Button
-        console.log("...changing element style...")
+        console.log("...changing element style...");
         btn.style.backgroundColor = "lightpink";
         btn.innerHTML = "Less";
         about.style.fontSize = "30px";
         about.style.color = "lightpink";
         clickAny.style.color = "lightpink";
-        clickAny.style.fontFamily= "bebas neue";
-      }
+        clickAny.style.fontFamily = "bebas neue";
+      };
       // revert to original text
       const orgText = () => {
-        console.log ("...starting restore original text function...");
-        about.textContent = "My Girls Bos. is a website created as a project for a Web Tech course at Babson College.";
-        more.textContent = "This website serves as a guide to the hottest restaurants, bars, clubs, and more in the city of Boston. We've got you covered to make the most out of what the city has to offer!";
+        console.log("...starting restore original text function...");
+        about.textContent =
+          "My Girls Bos. is a website created as a project for a Web Tech course at Babson College.";
+        more.textContent =
+          "This website serves as a guide to the hottest restaurants, bars, clubs, and more in the city of Boston. We've got you covered to make the most out of what the city has to offer!";
         clickAny.textContent = "";
         // Revert back to original Element Style based on User CLick anywhere on page
-        console.log("...reverting to original styles...")
+        console.log("...reverting to original styles...");
         btn.style.backgroundColor = "white";
         btn.innerHTML = "More";
         about.style.fontFamily = "raleway";
         about.style.fontSize = "19px";
         about.style.color = "white";
         more.style.fontFamily = "raleway";
-      }
+      };
       // trigger aboutMe function by clicking on button
-      btn.addEventListener('click', aboutMe);
+      btn.addEventListener("click", aboutMe);
       // trigger original text function by clicking anywhere on the document
-      document.addEventListener('click', orgText);
-      
+      document.addEventListener("click", orgText);
+
+      // SLIDESHOW FUNCTION FROM W3 SCHOOLS
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
     </script>
   </body>
 </html>

@@ -27,14 +27,9 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: 350px;
+  vertical-align: middle;
 }
-
-.container {
-  width: 95%;
-  margin: 0 auto;
-}
-
 section::after,
 footer::after {
   content: "";
@@ -92,13 +87,9 @@ p:last-of-type {
 }
 
 @media screen and (min-width: 60rem) {
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-  }
   .home-text {
     font-size: 2.75rem;
-    padding-top:10px;
+    padding-top: 10px;
   }
 }
 
@@ -126,9 +117,9 @@ p:last-of-type {
   color: white;
   font-weight: 700;
 }
-.aboutbtn{
-  font-family:"bebas neue",cursive;
-  width:50%;
+.aboutbtn {
+  font-family: "bebas neue", cursive;
+  width: 50%;
   text-align: center;
 }
 /* Header */
@@ -139,29 +130,28 @@ header {
   left: 0;
   right: 0;
 }
-.topnav{
+nav {
   overflow: hidden;
 }
-.topnav ul {
+nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.topnav li {
+nav li {
   display: inline-block;
   margin: 1em;
 }
-.topnav a {
+nav a {
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8em;
   padding: 1.5em;
-  color:#551a8b
-  
+  color: #551a8b;
 }
-.topnav a:hover,
-.topnav a:focus {
+nav a:hover,
+nav a:focus {
   color: white;
 }
 .topnav .icon {
@@ -170,24 +160,27 @@ header {
 /* When screen is less than 426px wide (iphone 12 pro screen) hide all links except for home 
 show the icon to open/close navbar */
 @media screen and (max-width: 426px) {
-  .topnav li{display:none;}
-  .topnav a.icon{
-    display:block;
-    float:right;
-    
+  .topnav li {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+    float: right;
   }
 }
-@media screen and (max-width: 426px){
-  .topnav.responsive{position:relative;}
-  .topnav.responsive .icon{
-    position:absolute;
-    right:0;
-    top:0;
+@media screen and (max-width: 426px) {
+  .topnav.responsive {
+    position: relative;
   }
-  .topnav.responsive a{
-    float:right;
-    display:block;
-    text-align:right;
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: right;
+    display: block;
+    text-align: right;
   }
 }
 /*Home Hero*/
@@ -198,24 +191,21 @@ show the icon to open/close navbar */
   background-size: cover;
   background-position: center;
   height: 40em;
-  
 }
 
-
-@media (max-width:768px){
-  .home-text{
+@media (max-width: 768px) {
+  .home-text {
     font-size: 20px;
-    padding-top:50px;
+    padding-top: 50px;
   }
-  .home-about-text h1{
-    font-size:20px;
+  .home-about-text h1 {
+    font-size: 20px;
   }
-  .container h1{
+  .container h1 {
     font-size: 20px;
     padding-bottom: 40px;
   }
 }
-
 
 .home-about-text {
   background-color: #232323;
@@ -246,7 +236,6 @@ show the icon to open/close navbar */
     background-image: url("images/you!.png");
     padding-bottom: 10em;
     height: 25em;
-
   }
   .home-about-text {
     width: 50%;
@@ -265,73 +254,123 @@ show the icon to open/close navbar */
 }
 
 /*Content*/
-.home-content {
-  margin: 3em 0;
-}
-
-figure.home-img {
+/* Slideshow Container (W3 Schools for reference code) */
+div.slideshow-container {
+  max-width: 65%;
   position: relative;
-  margin: 0;
-  display: inline-block;
-  width: 33.3333334%;
-}
-
-.profile {
-  position: absolute;
-  z-index: 100;
-  bottom: 0em;
-  left: 0em;
-  right: 0em;
-  color: white;
-  background: rgba(0, 0, 0, 0.75);
-  padding-bottom: 2em;
-}
-.profile p {
-  margin: 1em;
-}
-
-/* responsive css*/
-
-@media (min-width: 60rem) {
-  .home-img {
-    width: 33.3333334%;
-    overflow: hidden;
-  }
-  .profile {
-    transform: translateY(150%);
-  }
-
-  .home-img:hover .profile {
-    transform: translateY(0%);
-  }
-}
-
-@media (max-width: 786px){
+  margin: 0 auto;
+  height: 350px;
+  overflow: hidden;
   
-  .home-img img{
-    opacity:1;
-    display:block;
-    
-    transition: .5s ease;
-    backface-visibility: hidden;
+}
+/* Hide images by default */
+.mySlides {
+  display: none;
+}
+/* Next and Previous Cursors */
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: block;
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: block;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Caption Text */
+.imgText {
+  color: white;
+  font-size: 80px;
+  padding: 8px 12px;
+  margin-top: -22px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: "bebas neue", cursive;
+}
+@media (max-width:426px){
+  .imgText{
+    font-size: 50px;
+    top:30%;
   }
-.profile {
-  display:none;
-  opacity:0;
-  transition: .5s ease;
-  text-align:center;
-  background-color:#551a8b;
-  height: auto;
+  .slideshow-container{
+    height:fit-content;
+  }
 }
-.home-img:hover .profile{
-  opacity:.6;
-  display:block;
-  height:100%
+.imgText a{
+  background-color: white;
+  color:#551a8b;
 }
-.home-img:hover img{
-  opacity:.3
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: "bebas neue", cursive;
 }
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #551a8b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+ 
 }
+.active,
+.dot:hover {
+  background-color: pink;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* responsive css*/
 
 /*Form*/
 .subscribe {
