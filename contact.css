@@ -252,7 +252,11 @@ label{
     width: 100%;
     height:40px;
   }
-
+  .submit:hover{
+    background-color: lightpink;
+    color:white;
+    text-transform: uppercase;
+  }
   /* responsive CSS for Content.HTML */
   @media (max-width:768px){
     .feedback h1{
